@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/home_Login_Frg">
+    <fragment
+        android:id="@+id/home_Login_Frg"
+        android:name="com.example.demotvtokyo.view.Home_Login_Frg"
+        android:label="fragment_home__login__frg"
+        tools:layout="@layout/fragment_home__login__frg" >
+        <action
+            android:id="@+id/action_home_Login_Frg_to_playerFrg"
+            app:destination="@id/playerFrg" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerFrg"
+        android:name="com.example.demotvtokyo.view.PlayerFrg"
+        android:label="fragment_player_frg"
+        tools:layout="@layout/fragment_player_frg" >
+        <action
+            android:id="@+id/action_playerFrg_to_home_Login_Frg"
+            app:destination="@id/home_Login_Frg" />
+    </fragment>
+</navigation>
